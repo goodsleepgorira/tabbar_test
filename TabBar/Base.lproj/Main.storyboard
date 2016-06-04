@@ -1,25 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4KE-Pc-Y7T">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <connections>
+                                    <segue destination="cp2-g6-UiA" kind="embed" id="zce-uS-wkt"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEq-kL-hea">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <connections>
+                                    <segue destination="6vs-Qt-yss" kind="embed" id="2Ae-Of-XQF"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yEq-kL-hea" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8jH-7d-jcT"/>
+                            <constraint firstAttribute="trailing" secondItem="4KE-Pc-Y7T" secondAttribute="trailing" id="ROd-81-lzT"/>
+                            <constraint firstAttribute="trailing" secondItem="yEq-kL-hea" secondAttribute="trailing" id="X5U-Af-WAc"/>
+                            <constraint firstItem="yEq-kL-hea" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aKy-vE-YgT"/>
+                            <constraint firstItem="4KE-Pc-Y7T" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aSD-jP-i5X"/>
+                            <constraint firstAttribute="bottom" secondItem="4KE-Pc-Y7T" secondAttribute="bottom" constant="49" id="efe-vX-15S"/>
+                            <constraint firstAttribute="bottom" secondItem="yEq-kL-hea" secondAttribute="bottom" constant="49" id="hzw-T7-3nG"/>
+                            <constraint firstItem="4KE-Pc-Y7T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ok7-dy-aeP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="181.33333333333334" y="406.59333333333331"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="THJ-DT-6PZ">
+            <objects>
+                <viewController id="cp2-g6-UiA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pIC-4U-J5J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="morning320.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xp7-U8-G9S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xp7-U8-G9S" firstAttribute="leading" secondItem="pIC-4U-J5J" secondAttribute="leading" id="FPj-JJ-F3E"/>
+                            <constraint firstItem="Xp7-U8-G9S" firstAttribute="top" secondItem="pIC-4U-J5J" secondAttribute="top" id="Je9-oE-6Wu"/>
+                            <constraint firstAttribute="bottom" secondItem="Xp7-U8-G9S" secondAttribute="bottom" id="Lnc-cc-biP"/>
+                            <constraint firstAttribute="trailing" secondItem="Xp7-U8-G9S" secondAttribute="trailing" id="SUh-T1-hJy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2Z-8M-fyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="1131.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gea-FL-cXc">
+            <objects>
+                <viewController id="6vs-Qt-yss" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aMi-Mc-Gx0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="evening320.png" translatesAutoresizingMaskIntoConstraints="NO" id="J0k-3t-v0z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J0k-3t-v0z" firstAttribute="leading" secondItem="aMi-Mc-Gx0" secondAttribute="leading" id="Uu2-KW-98O"/>
+                            <constraint firstItem="J0k-3t-v0z" firstAttribute="top" secondItem="aMi-Mc-Gx0" secondAttribute="top" id="XDI-ZP-cXK"/>
+                            <constraint firstAttribute="bottom" secondItem="J0k-3t-v0z" secondAttribute="bottom" id="Z5c-dh-zAn"/>
+                            <constraint firstAttribute="trailing" secondItem="J0k-3t-v0z" secondAttribute="trailing" id="kRA-h0-cSY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgF-Qz-qa0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="1131.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="evening320.png" width="320" height="568"/>
+        <image name="morning320.png" width="320" height="568"/>
+    </resources>
 </document>
